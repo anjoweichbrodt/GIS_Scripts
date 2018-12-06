@@ -1,0 +1,5 @@
+CASE 
+WHEN length(make_line(point_n(oriented_bbox($geometry),1), point_n(oriented_bbox($geometry),2))) > length(make_line(point_n(oriented_bbox($geometry),1), point_n(oriented_bbox($geometry),4)))
+THEN 90-degrees(azimuth(point_n(oriented_bbox($geometry),1), point_n(oriented_bbox($geometry),2)))
+ELSE -degrees(azimuth(point_n(oriented_bbox($geometry),1), point_n(oriented_bbox($geometry),2)))
+END
