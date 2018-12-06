@@ -1,0 +1,1 @@
+if(bounds_height($geometry) / bounds_width($geometry) < 0.7, with_variable('scale_feature', (round(1.9* bounds_width( $geometry )/5))* 5 , if(@scale_feature < 10, 10, @scale_feature)), with_variable('scale_feature', (round(2.57* bounds_height( $geometry )/5))* 5 , if(@scale_feature < 10, 10, @scale_feature)))
